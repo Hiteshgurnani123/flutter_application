@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:helloworld/utils/routes.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -16,7 +17,7 @@ class LoginPage extends StatelessWidget {
         Text(
           "Welcome",
           style: TextStyle(
-            fontSize: 20,
+            fontSize: 28,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -45,10 +46,10 @@ class LoginPage extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () {
-                  print("Welcome");
+                  Navigator.pushNamed(context, MyRoutes.homeRoute);
                 },
                 child: Text("Login"),
-                style: TextButton.styleFrom(),
+                style: TextButton.styleFrom(minimumSize: Size(120, 50)),
               )
             ],
           ),
